@@ -3,7 +3,7 @@ from .models import Room, Message
 from django.http import HttpResponse, JsonResponse
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 
 
 def room(request, room):
