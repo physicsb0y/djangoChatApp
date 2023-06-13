@@ -1,6 +1,6 @@
 services:
   web:
-    image: render/python3.8-slim
+    image: render/python3.11.4-slim
     command: gunicorn -b 0.0.0.0:8000 djangoChatApp.wsgi:application
     environment:
       DJANGO_SETTINGS_MODULE: djangoChatApp.settings.py
