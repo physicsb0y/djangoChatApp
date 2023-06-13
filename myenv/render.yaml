@@ -1,0 +1,10 @@
+services:
+  web:
+    image: render/python3.8
+    command: gunicorn djangoChatApp.wsgi:application --bind 0.0.0.0:8000
+    environment:
+      DJANGO_SETTINGS_MODULE: djangoChatApp.settings
+  database:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: 9886550
