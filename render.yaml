@@ -1,9 +1,9 @@
 services:
   web:
-    image: render/python3.8
-    command: gunicorn djangoChatApp.wsgi:application --bind 0.0.0.0:8000
+    image: render/python3.8-slim
+    command: gunicorn -b 0.0.0.0:8000 djangoChatApp.wsgi:application
     environment:
-      DJANGO_SETTINGS_MODULE: djangoChatApp.settings
+      DJANGO_SETTINGS_MODULE: djangoChatApp.settings.py
   database:
     image: postgres
     environment:
